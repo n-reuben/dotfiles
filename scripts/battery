@@ -1,0 +1,3 @@
+#!/bin/bash
+#install acpi with fresh install
+acpi | awk '{print $4}' | sed 's/,*$//'
