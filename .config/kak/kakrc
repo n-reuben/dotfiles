@@ -1,0 +1,24 @@
+## kak-lsp
+#eval %sh{kak-lsp --kakoune -s $kak_session}
+#lsp-enable
+
+
+# Listed Config Files
+
+
+evaluate-commands %sh{
+    config_files="
+        cursorline.kak
+        general.kak
+        plugins.kak
+        languages.kak
+    "
+
+    for file in $config_files; do
+        printf "%s\n" "try %{
+            source '$HOME/.config/kak/$file'
+        } catch %{
+            try %{ echo -debug \"%val{error}\" } catch { echo -debug 'Error sourcing $file' }
+        }"
+    done
+}

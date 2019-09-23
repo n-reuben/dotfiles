@@ -1,0 +1,221 @@
+
+#Gruvbox color scheme
+
+#[colors]
+## hard contrast: background = #1d2021
+##background = #282828
+##background = rgba(0,0,0,0.00)
+#background = rgba(0,0,0,0.5)
+## soft contrast: background = #32302f
+#foreground = #ebdbb2
+#foreground_bold = #ebdbb2
+#
+## dark0 + gray
+#color0 = #282828
+#color8 = #928374
+#
+## neutral_red + bright_red
+#color1 = #cc241d
+#color9 = #fb4934
+#
+## neutral_green + bright_green
+#color2 = #98971a
+#color10 = #b8bb26
+#
+## neutral_yellow + bright_yellow
+#color3 = #d79921
+#color11 = #fabd2f
+#
+## neutral_blue + bright_blue
+#color4 = #458588
+#color12 = #83a598
+#
+## neutral_purple + bright_purple
+#color5 = #b16286
+#color13 = #d3869b
+#
+## neutral_aqua + faded_aqua
+#color6 = #689d6a
+#color14 = #8ec07c
+#
+## light4 + light1
+#color7 = #a89984
+#color15 = #ebdbb2
+
+
+#Gruvbox-Material
+#[colors]
+#background = rgba(50, 48, 47, 0.5)
+## soft contrast: background = #32302f
+#foreground = #ebdbb2
+#foreground_bold = #ebdbb2
+#
+## dark0 + gray
+#color0 = #665c54
+#color8 = #928374
+#
+## neutral_red + bright_red
+#color1 = #ea6962
+#color9 = #ea6962
+#
+## neutral_green + bright_green
+#color2 = #a9b665
+#color10 = #a9b665
+#
+## neutral_yellow + bright_yellow
+#color3 = #e78a4e
+#color11 = #e3a84e
+#
+## neutral_blue + bright_blue
+#color4 = #7daea3
+#color12 = #7daea3
+#
+## neutral_purple + bright_purple
+#color5 = #d3869b
+#color13 = #d3869b
+#
+## neutral_aqua + faded_aqua
+#color6 = #89b482
+#color14 = #89b482
+#
+## light4 + light1
+#color7 = #dfbf8e
+#color15 = #dfbf8e
+
+
+#My Light Color Scheme
+
+
+#[colors]
+#
+# special
+#foreground      = #bd9281
+#foreground_bold = #bd9281
+#cursor          = #bd9281
+#background      = #edefdf
+#
+# black
+#color0  = #f5e55a
+#color8 = #f5e55a
+#
+## red
+#color1  = #98b895
+#color9  = #98b895
+#
+## green
+#color2  = #fed5bc
+#color10 = #fed5bc
+#
+## yellow
+#color3  = #d8c5be
+#color11 = #d8c5be
+#
+## blue
+#color4  = #d7aa70
+#color12 = #d7aa70
+#
+## magenta
+#color5  = #bdd6e7
+#color13  = #bdd6e7
+#
+## cyan
+#color6  = #dcb8a4
+#color14 = #dcb8a4
+#
+## white
+#color7  = #dfccf1
+#color15 = #dfccf1
+
+
+
+#Gruvbox-Material
+[colors]
+
+# special
+foreground = #bd9281
+foreground_bold = #bd9281
+cursor = rgba( 207, 226, 199, 1.000)
+background      = #edefdf
+
+# dark0 + gray
+color0 = #665c54
+color8 = #928374
+
+# neutral_red + bright_red
+color1 = #ea6962
+color9 = #ea6962
+
+# neutral_green + bright_green
+color2 = #a9b665
+color10 = #a9b665
+
+# neutral_yellow + bright_yellow
+color3 = #e78a4e
+color11 = #e3a84e
+
+# neutral_blue + bright_blue
+color4 = #7daea3
+color12 = #7daea3
+
+# neutral_purple + bright_purple
+color5 = #d3869b
+color13 = #d3869b
+
+# neutral_aqua + faded_aqua
+color6 = #89b482
+color14 = #89b482
+
+# light4 + light1
+color7 = #dfbf8e
+color15 = #dfbf8e
+
+
+#Nord
+
+#color0 = #2E3440
+#color8 = #88C0D0
+#
+## neutral_red + bright_red
+#color1 = #3B4252
+#color9 = #81A1C1
+#
+## neutral_green + bright_green
+#color2 = #434C5E
+#color10 = #5E81AC
+#
+## neutral_yellow + bright_yellow
+#color3 = #4C566A
+#color11 = #BF616A
+#
+## neutral_blue + bright_blue
+#color4 = #D8DEE9
+#color12 = #D08770
+#
+## neutral_purple + bright_purple
+#color5 = #E5E9F0
+#color13 = #EBCB8B
+#
+## neutral_aqua + faded_aqua
+#color6 = #ECEFF4
+#color14 = #A3BE8C
+#
+## light4 + light1
+#color7 = #8FBCBB
+#color15 = #B48EAD
+
+
+
+
+
+
+
+
+# vim: ft=dosini cms=#%s
+
+[options]
+#font = Monospace 9
+#font = xos4 Terminus 12px
+#font = Droid Sans Mono 8
+font = Hermit 10
+#font = Bauhaus_.ttf 10
+#font = BauhausStd-Medium 10
