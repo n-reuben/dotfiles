@@ -6,7 +6,7 @@ foreground = ${xrdb:color7:#222}
 foreground-alt = #555
 primary = ${xrdb:color7:#222}
 secondary = #e60053
-alert = #bd2c40
+alert = #bf616a
 
 [bar/top]
 width = 100%
@@ -16,7 +16,7 @@ height = 27
 ;adds transparency
 background = #00000000
 ;foreground = ${colors.foreground}
-foreground = #bd9281
+foreground = #88c0d0
 
 modules-left = bspwm i3
 modules-center = time
@@ -42,7 +42,7 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline = #FED5BC
+label-focused-underline = #8fbcbb
 label-focused-padding = 2
 
 label-occupied = %index%
@@ -111,38 +111,37 @@ type = custom/script
 exec = /usr/bin/env sh -c "date +%H:%M"
 interval = 1
 format-prefix = " "
-format-underline = #FED5BC
+format-underline = #8fbcbb
 
 [module/battery]
 type = custom/script
 exec = /home/nitish/scripts/battery
 interval = 1
 format-prefix = " "
-format-underline = #FED5BC
+format-underline = #8fbcbb
 
 [module/no_battery]
 type = custom/script
 exec = 
 interval = 1
 format-prefix = " "
-format-underline = #FED5BC
-
+format-underline = #8fbcbb
 
 [module/wlan]
 type = custom/script
 exec = iwgetid -r
 interval = 1
 format-prefix = " "
-format-underline = #FED5BC
+format-underline = #8fbcbb
 
 [module/brightness]
 type= custom/script
 exec = ~/scripts/getbrightness
 interval = 0.1
-format-underline = #FED5BC
+format-underline = #8fbcbb
 
 [module/volume]
 type = custom/script
 exec = ~/scripts/getvolume
 interval = 0.1
-format-underline = #FED5BC
+format-underline = #8fbcbb

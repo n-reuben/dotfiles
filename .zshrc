@@ -13,8 +13,8 @@ compinit
 # End of lines added by compinstall
 
 
-export VISUAL="kak"
-export EDITOR="kak"
+export VISUAL="nvim"
+export EDITOR="nvim"
 export LC_CTYPE=en_US.UTF-8
 bindkey -e
 
