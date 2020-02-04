@@ -41,7 +41,8 @@ done
 
 # install only user space folders
 for app in ${useronly[@]}; do
-    if [[! "$(whoami)" = *"root"*]]; then
+    if [[ ! "$(whoami)" = *"root"* ]]
+    then
         stowit "${HOME}" $app 
     fi
 done
