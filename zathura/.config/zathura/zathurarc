@@ -2,8 +2,8 @@
 # zathurarc-nord
 
 set font                        "iosevka 9"
-set default-bg                  "#151515" #00
-set default-fg                  "#202020" #01
+set default-bg                  "#2e3440" #00
+set default-fg                  "#d8dee9" #01
 
 set statusbar-fg                "#B0B0B0" #04
 set statusbar-bg                "#202020" #01
@@ -17,7 +17,7 @@ set notification-error-fg       "#151515" #00
 set notification-warning-bg     "#AC4142" #08
 set notification-warning-fg     "#151515" #00
 
-set highlight-color             "#F4BF75" #0A
+set highlight-color             "#eceff4" #0A
 set highlight-active-color      "#6A9FB5" #0D
 
 set completion-highlight-fg     "#303030" #02
@@ -29,7 +29,7 @@ set completion-fg               "#75B5AA" #0C
 set notification-bg             "#90A959" #0B
 set notification-fg             "#151515" #00
 
-set recolor-lightcolor          "#2e3440" #Dark Grey
+set recolor-lightcolor          "#3b4252" #Dark Grey
 set recolor-darkcolor           "#eceff4" #Off-White
 set recolor                     "true"
 

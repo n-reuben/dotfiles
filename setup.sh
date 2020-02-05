@@ -15,6 +15,7 @@ useronly=(
     compton
     i3
     polybar
+    rofi
     termite
     neovim
     kakoune
