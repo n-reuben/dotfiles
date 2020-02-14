@@ -1,157 +1,87 @@
 
 
-#Gruvbox-Material
-#[colors]
-#background = rgba(50, 48, 47, 0.5)
-## soft contrast: background = #32302f
-#foreground = #ebdbb2
-#foreground_bold = #ebdbb2
-#
-## dark0 + gray
-#color0 = #665c54
-#color8 = #928374
-#
-## neutral_red + bright_red
-#color1 = #ea6962
-#color9 = #ea6962
-#
-## neutral_green + bright_green
-#color2 = #a9b665
-#color10 = #a9b665
-#
-## neutral_yellow + bright_yellow
-#color3 = #e78a4e
-#color11 = #e3a84e
-#
-## neutral_blue + bright_blue
-#color4 = #7daea3
-#color12 = #7daea3
-#
-## neutral_purple + bright_purple
-#color5 = #d3869b
-#color13 = #d3869b
-#
-## neutral_aqua + faded_aqua
-#color6 = #89b482
-#color14 = #89b482
-#
-## light4 + light1
-#color7 = #dfbf8e
-#color15 = #dfbf8e
-
-
-##Gruvbox-Material-Plant
-#[colors]
-#
-## special
-#foreground = #bd9281
-#foreground_bold = #bd9281
-#cursor = rgba( 207, 226, 199, 1.000)
-#background      = #edefdf
-#
-## dark0 + gray
-#color0 = #665c54
-#color8 = #928374
-#
-## neutral_red + bright_red
-#color1 = #ea6962
-#color9 = #ea6962
-#
-## neutral_green + bright_green
-#color2 = #a9b665
-#color10 = #a9b665
-#
-## neutral_yellow + bright_yellow
-#color3 = #e78a4e
-#color11 = #e3a84e
-#
-## neutral_blue + bright_blue
-#color4 = #7daea3
-#color12 = #7daea3
-#
-## neutral_purple + bright_purple
-#color5 = #d3869b
-#color13 = #d3869b
-#
-## neutral_aqua + faded_aqua
-#color6 = #89b482
-#color14 = #89b482
-#
-## light4 + light1
-#color7 = #dfbf8e
-#color15 = #dfbf8e
-
-
-#dunno
-#
-#color0 = #2E3440
-#color8 = #88C0D0
-#
-## neutral_red + bright_red
-#color1 = #3B4252
-#color9 = #81A1C1
-#
-## neutral_green + bright_green
-#color2 = #434C5E
-#color10 = #5E81AC
-#
-## neutral_yellow + bright_yellow
-#color3 = #4C566A
-#color11 = #BF616A
-#
-## neutral_blue + bright_blue
-#color4 = #D8DEE9
-#color12 = #D08770
-#
-## neutral_purple + bright_purple
-#color5 = #E5E9F0
-#color13 = #EBCB8B
-#
-## neutral_aqua + faded_aqua
-#color6 = #ECEFF4
-#color14 = #A3BE8C
-#
-## light4 + light1
-#color7 = #8FBCBB
-#color15 = #B48EAD
 
 #Nord Theme
+#
+#[colors]
+#cursor = #d8dee9
+#cursor_foreground = #2e3440
+#
+#foreground = #d8dee9
+#foreground_bold = #d8dee9
+#background = #2e3440
+#
+#highlight = #4c566a
+#
+#color0  = #3b4252
+#color1  = #bf616a
+#color2  = #a3be8c
+#color3  = #ebcb8b
+#color4  = #81a1c1
+#color5  = #b48ead
+#color6  = #88c0d0
+#color7  = #e5e9f0
+#color8  = #4c566a
+#color9  = #bf616a
+#color10 = #a3be8c
+#color11 = #ebcb8b
+#color12 = #81a1c1
+#color13 = #b48ead
+#color14 = #8fbcbb
+#color15 = #eceff4
+
+#Firefly Theme
 
 [colors]
-cursor = #d8dee9
-cursor_foreground = #2e3440
 
-foreground = #d8dee9
-foreground_bold = #d8dee9
-background = #2e3440
+# special
+foreground      = #a2a4b0
+foreground_bold = #a2a4b0
+cursor          = #a2a4b0
+background      = #292933
 
-highlight = #4c566a
+#special alternate
+#
+#foreground      = #f4f7e2
+#foreground_bold = #f4f7e2
+#cursor          = #f4f7e2
+#background      = #102029
 
-color0  = #3b4252
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #81a1c1
-color5  = #b48ead
-color6  = #88c0d0
-color7  = #e5e9f0
-color8  = #4c566a
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #81a1c1
-color13 = #b48ead
-color14 = #8fbcbb
-color15 = #eceff4
 
+# black
+color0  = #32323d
+color8  = #40424f
+
+# red
+color1  = #f48fb1
+color9  = #ec4890
+
+# green
+color2  = #1d9c80
+color10 = #43cb8c
+
+# yellow
+color3  = #a1efd3
+color11 = #fffdaf
+
+# blue
+color4  = #92b6f4
+color12 = #87dfeb
+
+# magenta
+color5  = #985eff
+color13 = #bd99ff
+
+# cyan
+color6  = #6dc7b5
+color14 = #51e2c2
+
+# white
+color7  = #4d4f5c
+color15 = #c6c6c6
 
 # vim: ft=dosini cms=#%s
 
 [options]
-#font = Monospace 9
-#font = xos4 Terminus 12px
-#font = Droid Sans Mono 8
 font = Hermit 10
 #font = Iosevka 10.75
-#font = Bauhaus_.ttf 10
-#font = BauhausStd-Medium 10

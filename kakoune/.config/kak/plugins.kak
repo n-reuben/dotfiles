@@ -1,11 +1,8 @@
 # Install kak plugs
 
-# Plugin installation directory
-#set-option global plug_install_dir %sh{ echo $HOME/.config/kak/plugins }
-
 evaluate-commands %sh{
     # kak plugin directory
-    PLUGIN_DIRECTORY="$HOME/.config/kak/plugins"
+    PLUGIN_DIRECTORY="$HOME/.plugins/kak/plugins"
     KAK_PLUG="$PLUGIN_DIRECTORY/plug.kak/rc/plug.kak"
 
     # if does not exist, create it and git clone kak plug
@@ -24,6 +21,9 @@ evaluate-commands %sh{
         fi
     fi
 }
+
+# Plugin installation directory
+set-option global plug_install_dir %sh{ echo $HOME/.plugins/kak/plugins }
 
 # Plugins
 #Plugin Manager

@@ -1,7 +1,7 @@
 
 """ Nitish's Neovim Init.Vim """
 
-call plug#begin()
+call plug#begin('$HOME/.plugins/nvim/plugged')
 
 " View Settings - Main
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -182,7 +182,7 @@ call plug#end()
 
 """ Coloring
 syntax on
-color nord
+color firefly
 highlight Pmenu guibg=white guifg=black gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
