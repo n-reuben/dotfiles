@@ -220,6 +220,6 @@ border_radius 8
 #exec /usr/bin/compton --config ~/nitish_reuben/.config/compton/compton.conf~.i3/config
 exec --no-startup-id "nm-applet"
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec --no-startup-id "xss-lock -- betterlockscreen -l dimblur"

@@ -12,7 +12,7 @@ base=(
 # folders that should, or only need to be installed for a local user
 useronly=(
     xorg
-    compton
+    picom
     i3
     polybar
     rofi
