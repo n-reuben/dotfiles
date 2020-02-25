@@ -83,5 +83,6 @@ color15 = #c6c6c6
 # vim: ft=dosini cms=#%s
 
 [options]
-font = Hermit 10
-#font = Iosevka 10.75
+#font = Hermit 10
+#font = Iosevka 10
+font = monofur Regular 12

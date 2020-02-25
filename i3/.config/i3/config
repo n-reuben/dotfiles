@@ -221,5 +221,7 @@ border_radius 8
 exec --no-startup-id "nm-applet"
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
+# termtabs generates tab state where -i indicates number of tabs
+exec "termtabs -i 6"
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec --no-startup-id "xss-lock -- betterlockscreen -l dimblur"

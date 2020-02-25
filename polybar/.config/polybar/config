@@ -1,147 +1,590 @@
+{;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains a lot of information
+;
+;=====================================================
+; find icon name : fc-match -a |grep -i Material
+; to find icon: xfd -fa MaterialIcons,
+; echo "\ueXXX" to print and paste here
+
+
 [colors]
-;background = ${xrdb:color0:#222}
-background = #dd232C31
-background-alt = #ff232C31
-foreground = ${xrdb:color7:#222}
-foreground-alt = #555
-primary = ${xrdb:color7:#222}
-secondary = #e60053
+bg = #292933
+fg = #a2a4b0
+;fg-alt = #555
+primary = #eaf2ba
+secondary = #ebcb8b
 alert = #bf616a
+transparent = #00000000
 
-[bar/top]
+
+[bar/main]
+; Use either of the following command to list available outputs:
+; If unspecified, the application will pick the first one it finds.
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; If no monitor is given, the primary monitor is used if it exists
+
+;monitor =
+
+; Use the specified monitor as a fallback if the main one is not found.
+
+;monitor-fallback =
+
+; Require the monitor to be in connected state
+; XRandR sometimes reports my monitor as being disconnected (when in use)
+;monitor-strict = false
+
+; Use fuzzy matching for monitors (only ignores dashes -)
+; Useful when monitors are named differently with different drivers.
+
+monitor-exact = true
+
+; Tell the Window Manager not to configure the window.
+; Use this to detach the bar if your WM is locking its size/position.
+; Note: With this most WMs will no longer reserve space for 
+; the bar and it will overlap other windows. You need to configure
+; your WM to add a gap where the bar will be placed.
+
+override-redirect = false
+
+; Put the bar at the bottom of the screen
+
+bottom = false
+
+; Prefer fixed center position for the `modules-center` block. 
+; The center block will stay in the middle of the bar whenever
+; possible. It can still be pushed around if other blocks need
+; more space.
+; When false, the center block is centered in the space between 
+; the left and right block.
+
+fixed-center = true
+
+; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
+; the percentage can optionally be extended with a pixel offset like so:
+; 50%:-10, this will result in a width or height of 50% minus 10 pixels
+
 width = 100%
-height = 27
+height = 2.5%
 
-;background = ${colors.background}
-;adds transparency
-background = #00000000
-;foreground = ${colors.foreground}
-foreground = #88c0d0
+; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+; the percentage can optionally be extended with a pixel offset like so:
+; 50%:-10, this will result in an offset in the x or y direction 
+; of 50% minus 10 pixels
 
-modules-left = bspwm i3
-modules-center = time
-modules-right = brightness wlan no_battery
+offset-x = 0
+offset-y = 0
 
-line-size = 3
-line-color = #fff
+; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
 
-padding-left = 0
-padding-right = 2
+background = ${colors.bg}
 
-module-margin-left = 0
-module-margin-right = 2
+; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
 
-font-0 = Source Code Pro Medium:pixelsize=10;1
-font-1 = FontAwesome5Free:pixelsize=10
-font-2 = FontAwesome5Free:style=Solid:pixelsize=10
-font-3 = FontAwesome5Brands:pixelsize=10
-font-4 = FontAwesome5Brands:style=Solid:pixelsize=10
+foreground = ${colors.fg}
+
+; Background gradient (vertical steps)
+;   background-[0-9]+ = #aarrggbb
+
+;background-0 = 
+
+; Value used for drawing rounded corners
+; Note: This shouldn't be used together with border-size because the border 
+; doesn't get rounded. For this to work you may also need to enable 
+; pseudo-transparency or use a compositor like compton.
+; Individual top/bottom values can be defined using:
+;   radius-{top,bottom}
+
+radius = 0.0
+
+; Under-/overline pixel size and argb color
+; Individual values can be defined using:
+;   {overline,underline}-size
+;   {overline,underline}-color
+
+;line-size = 0
+;line-color = #f00
+
+; Values applied to all borders
+; Individual side values can be defined using:
+;   border-{left,top,right,bottom}-size
+;   border-{left,top,right,bottom}-color
+; The top and bottom borders are added to the bar height, so the effective
+; window height is:
+;   height + border-top-size + border-bottom-size
+; Meanwhile the effective window width is defined entirely by the width key and
+; the border is placed within this area. So you effectively only have the
+; following horizontal space on the bar:
+;   width - border-right-size - border-left-size
+; border-size can be defined as pixel value (e.g. 35) or percentage (e.g. 50%),
+; the percentage can optionally be extended with a pixel offset like so:
+; 50%:-10, this will result in 50% minus 10 pixels. The percentage is relative
+; to the bar width or height depending on the border.
+ 
+;border-size = 
+;border-color =
+
+border-left-size = 20%
+border-right-size = 20%
+
+border-top-size = 2%
+border-color = ${colors.transparent} 
+
+; Number of spaces to add at the beginning/end of the bar
+; Individual side values can be defined using:
+;   padding-{left,right}
+
+padding-left = 1
+padding-right = 1
+
+; Number of spaces to add before/after each module
+; Individual side values can be defined using:
+;   module-margin-{left,right}
+
+module-margin-left = 1
+module-margin-right = 1
+
+; Fonts are defined using <font-name>;<vertical-offset>
+; Font names are specified using a fontconfig pattern.
+;   font-0 = NotoSans-Regular:size=8;2
+;   font-1 = MaterialIcons:size=10
+;   font-2 = Termsynu:size=8;-1
+;   font-3 = FontAwesome:size=10
+; See the Fonts wiki page for more details
+
+font-0 = monofur:size=13
+font-1 = M+ 1mn:pixelsize=15;3
+font-2 = MaterialIcons:size=13:antialias=false;6
+
+; Modules are added to one of the available blocks
+;   modules-left = cpu ram
+;   modules-center = xwindow xbacklight
+;   modules-right = ipc clock
+
+modules-left = workspaces
+modules-center = 
+modules-right = date
+ 
+; The separator will be inserted between the output of each module
+
+;separator =
+
+; This value is used to add extra spacing between elements
+; @deprecated: This parameter will be removed in an upcoming version
+
+;spacing = 0
+
+; Opacity value between 0.0 and 1.0 used on fade in/out
+
+;dim-value = 1.0
+
+; Value to be used to set the WM_NAME atom
+; If the value is empty or undefined, the atom value
+; will be created from the following template: polybar-[BAR]_[MONITOR]
+; NOTE: The placeholders are not available for custom values
+
+;wm-name =
+
+; Locale used to localize various module data (e.g. date)
+; Expects a valid libc locale, for example: sv_SE.UTF-8
+
+;locale = 
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+;   none
+
+;tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+
+;tray-detached = false
+
+; Tray icon max size
+
+;tray-maxsize = 16
+
+; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+
+;tray-transparent = false
+
+; Background color for the tray container 
+; ARGB color (e.g. #f00, #ff992a, #ddff1023)
+; By default the tray container will use the bar
+; background color.
+
+;tray-background = ${root.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+
+;tray-offset-x = 0
+;tray-offset-y = 0
+
+; Pad the sides of each tray icon
+
+;tray-padding = 2
+
+; Scale factor for tray clients
+
+;tray-scale = 1.0
+
+; Restack the bar window and put it above the
+; selected window manager's root
+;
+; Fixes the issue where the bar is being drawn
+; on top of fullscreen window's
+;
+; Currently supported WM's:
+;   bspwm
+;   i3 (requires: `override-redirect = true`)
+;wm-restack = 
+
+; Set a DPI values used when rendering text
+; This only affects scalable fonts
+; Set this to 0 to let polybar calculate the dpi from the screen size.
+; dpi = 
+
+;dpi-x = 96
+;dpi-y = 96
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+; Fallback click handlers that will be called if
+; there's no matching module handler found.
+
+;click-left = 
+;click-middle = 
+;click-right =
+;scroll-up =
+;scroll-down =
+;double-click-left =
+;double-click-middle =
+;double-click-right =
+
+; Requires polybar to be built with xcursor support (xcb-util-cursor)
+; Possible values are:
+; - default   : The default pointer as before, can also be an empty string (default)
+; - pointer   : Typically in the form of a hand
+; - ns-resize : Up and down arrows, can be used to indicate scrolling
+
+;cursor-click = 
+;cursor-scroll = 
+
+
+
+[bar/secondary]
+
+override-redirect = false
+bottom = true
+fixed-center = true
+
+enable-ipc = true
+
+width = 100% 
+height = 3%
+
+offset-x =
+offset-y =
+
+background = ${colors.bg}
+
+foreground = ${colors.fg}
+
+radius = 0.0
+
+border-left-size = 40%
+border-right-size = 40%
+
+border-top-size =
+border-bottom-size = 1%
+
+border-color = ${colors.transparent}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = monofur:size=13
+font-1 = M+ 1mn:pixelsize=15;3
+font-2 = MaterialIcons:size=13:antialias=false;6
+
+modules-left = 
+modules-center = tab1 tab2 tab3 tab4 tab5 tab6
+modules-right = 
+
+
+
+
+
+
+
+;
+; BAR MODULES
+;
+
+! Polybar Terminal Tabs modules
+! Paste these into your polybar config
+
+[module/tab1]
+type = custom/ipc
+hook-0 = termtabs -t 1
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 1
+click-left = polybar-msg hook tab1 1
+initial = 2
+
+[module/tab2]
+type = custom/ipc
+hook-0 = termtabs -t 2
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 2
+click-left = polybar-msg hook tab2 1
+initial = 2
+
+[module/tab3]
+type = custom/ipc
+hook-0 = termtabs -t 3
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 3
+click-left = polybar-msg hook tab3 1
+initial = 2
+
+[module/tab4]
+type = custom/ipc
+hook-0 = termtabs -t 4
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 4
+click-left = polybar-msg hook tab4 1
+initial = 2
+
+[module/tab5]
+type = custom/ipc
+hook-0 = termtabs -t 5
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 5
+click-left = polybar-msg hook tab5 1
+initial = 2
+
+[module/tab6]
+type = custom/ipc
+hook-0 = termtabs -t 6
+hook-1 = echo "%{F#1e1e20} "
+hook-2 = termtabs -c 6
+click-left = polybar-msg hook tab6 1
+initial = 2
+
+
+[module/demo]
+type = custom/ipc
+hook-0 = echo foobar
+hook-1 = date +%s
+hook-2 = whoami
+initial = 1
+click-left = polybar-msg -p %pid% hook demo 1
+click-right = polybar-msg -p %pid% hook demo 2
+double-click-left = polybar-msg -p %pid% hook demo 3
+
+
+[module/calcurse]
+type = custom/text
+content = %{F#666}1%{F-} 
+content-underline = ${xrdb:color3}
+click-left = bartermapp calcurse 1 
+
+[module/wlan]
+
+type = internal/network
+interface = wlp5s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+
+format-disconnected = <label-disconnected>
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline = #8fbcbb
-label-focused-padding = 2
+label-focused = %name%
+label-focused-background = ${xrdb:background:#ff0000}
+label-focused-underline= ${xrdb:color9:#ff0000}
+label-focused-padding = 1
 
-label-occupied = %index%
-label-occupied-padding = 2
+label-occupied = %name%
 
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-occupied-foreground = ${xrdb:color1:FF000000}
+label-occupied-padding = 1
 
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-urgent = %name%
+label-urgent-background = ${xrdb:color1:#ff0000}
+label-urgent-padding = 1
 
-; Separator in between workspaces
-; label-separator = |
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %icon% %index%
-;label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-background = #00000000
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-
-; visible = Active workspace on unfocused monitor
-label-visible = %icon% %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon% %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-; Separator in between workspaces
-; label-separator = |
-
-ws-icon-0 = "1;"
-ws-icon-1 = "2;"
-ws-icon-2 = "3"
-ws-icon-3 = "4"
-ws-icon-4 = "5;
-ws-icon-default =
-
-;"     
-
-[module/time]
-type = custom/script
-exec = /usr/bin/env sh -c "date +%H:%M"
-interval = 1
-format-prefix = " "
-format-underline = #8fbcbb
+label-empty = %name%
+label-empty-foreground = ${xrdb:foreground:#ff0000}
+label-empty-padding = 1
 
 [module/battery]
-type = custom/script
-exec = /home/nitish/scripts/battery
-interval = 1
-format-prefix = " "
-format-underline = #8fbcbb
 
-[module/no_battery]
-type = custom/script
-exec = 
-interval = 1
-format-prefix = " "
-format-underline = #8fbcbb
+type = internal/battery
+battery = BAT1
+adapter = AC
+full-at = 98
 
-[module/wlan]
-type = custom/script
-exec = iwgetid -r
-interval = 1
-format-prefix = " "
-format-underline = #8fbcbb
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
 
-[module/brightness]
-type= custom/script
-exec = ~/scripts/getbrightness
-interval = 0.1
-format-underline = #8fbcbb
+format-full-prefix = 
+format-full-prefix-foreground = ${colors.foreground-alt}
 
-[module/volume]
-type = custom/script
-exec = ~/scripts/getvolume
-interval = 0.1
-format-underline = #8fbcbb
+ramp-capacity-0 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix =  
+format-prefix-foreground = ${colors.fg}
+
+label = %date% %time%
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 1
+
+;icon-0 = 1;❶
+;icon-1 = 2;❷
+;icon-2 = 3;❸
+;icon-3 = 4;❹
+;icon-4 = 5;❺
+;icon-5 = 6;❻
+;icon-6 = 7;❼
+;icon-7 = 8;❽
+;icon-8 = 9;❾
+;icon-9 = 10;❿
+
+icon-default = 
+
+format = <label-state>
+format-background = ${colors.bg}
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-empty-foreground = ${colors.fg}
+label-active-foreground = ${colors.primary}
+label-urgent-foreground = ${colors.secondary}
+label-occupied-foreground = ${colors.alert}
+
+;
+;Application Settings
+;
+
+
+[settings]
+; The throttle settings lets the eventloop swallow up til X events
+; if they happen within Y millisecond after first event was received.
+; This is done to prevent flood of update event.
+;
+; For example if 5 modules emit an update event at the same time, we really
+; just care about the last one. But if we wait too long for events to swallow
+; the bar would appear sluggish so we continue if timeout
+; expires or limit is reached.
+
+;throttle-output = 5
+;throttle-output-for = 10
+
+; Time in milliseconds that the input handler will wait between processing events
+
+;throttle-input-for = 30
+
+; Reload upon receiving XCB_RANDR_SCREEN_CHANGE_NOTIFY events
+
+;screenchange-reload = true
+
+; Compositing operators
+; @see: https://www.cairographics.org/manual/cairo-cairo-t.html#cairo-operator-t
+
+;compositing-background = source
+;compositing-foreground = over
+;compositing-overline = over
+;compositing-underline = over
+;compositing-border = over
+
+compositing-background = xor
+compositing-foreground = source
+
+; Define fallback values used by all module formats
+;format-foreground = 
+;format-background = 
+;format-underline =
+;format-overline =
+;format-spacing =
+;format-padding =
+;format-margin =
+;format-offset =
+
+; Enables pseudo-transparency for the bar
+; If set to true the bar can be transparent without a compositor.
+
+;pseudo-transparency = false
+
+
+;
+;Global WM Settings
+;
+
+[global/wm]
+; Adjust the _NET_WM_STRUT_PARTIAL top value
+;   Used for top aligned bars
+
+margin-bottom = 0
+
+; Adjust the _NET_WM_STRUT_PARTIAL bottom value
+;   Used for bottom aligned bars
+
+margin-top = 0
+
