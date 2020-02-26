@@ -15,12 +15,13 @@ function toggle_tab {
 	icon=${tabs[$tab_num,icon]}
 	x=$(($xoffset + ($xinterval * ($tab_num - 1))))
 	
-	tdrop -a -w $width -h $height -x $x -y $yoffset $terminal -e $term_app
+	tdrop -a -w $width% -h $height -x $x% -y $yoffset -n $tab_num $terminal -e $term_app
 	
+
 	tval=$(update_tab_status)
 	if [ $tval == 0 ]; then
 		echo "%{F$t_closed_col} $icon"
-	else
+    else
 		echo "%{F$t_open_col} $icon"
 	fi
 }

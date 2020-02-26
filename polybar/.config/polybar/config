@@ -347,8 +347,8 @@ modules-right =
 type = custom/ipc
 hook-0 = termtabs -t 1
 hook-1 = echo "%{F#1e1e20} "
-hook-2 = termtabs -c 1
-click-left = polybar-msg hook tab1 1
+hook-2 = echo "%{F#eaf2ba} "
+click-left = termtabs -t 1
 initial = 2
 
 [module/tab2]
@@ -356,7 +356,7 @@ type = custom/ipc
 hook-0 = termtabs -t 2
 hook-1 = echo "%{F#1e1e20} "
 hook-2 = termtabs -c 2
-click-left = polybar-msg hook tab2 1
+click-left = termtabs -t 2
 initial = 2
 
 [module/tab3]
@@ -364,7 +364,7 @@ type = custom/ipc
 hook-0 = termtabs -t 3
 hook-1 = echo "%{F#1e1e20} "
 hook-2 = termtabs -c 3
-click-left = polybar-msg hook tab3 1
+click-left = termtabs -t 3
 initial = 2
 
 [module/tab4]
@@ -372,7 +372,7 @@ type = custom/ipc
 hook-0 = termtabs -t 4
 hook-1 = echo "%{F#1e1e20} "
 hook-2 = termtabs -c 4
-click-left = polybar-msg hook tab4 1
+click-left = termtabs -t 4
 initial = 2
 
 [module/tab5]
@@ -380,7 +380,7 @@ type = custom/ipc
 hook-0 = termtabs -t 5
 hook-1 = echo "%{F#1e1e20} "
 hook-2 = termtabs -c 5
-click-left = polybar-msg hook tab5 1
+click-left = termtabs -t 5
 initial = 2
 
 [module/tab6]
@@ -388,7 +388,7 @@ type = custom/ipc
 hook-0 = termtabs -t 6
 hook-1 = echo "%{F#1e1e20} "
 hook-2 = termtabs -c 6
-click-left = polybar-msg hook tab6 1
+click-left = termtabs -t 6
 initial = 2
 
 
