@@ -15,7 +15,7 @@ function toggle_tab {
 	icon=${tabs[$tab_num,icon]}
 	x=$(($xoffset + ($xinterval * ($tab_num - 1))))
 	
-	tdrop -a -w $width% -h $height -x $x% -y $yoffset -n $tab_num $terminal -e $term_app
+	tdrop -a -w $width% -h $height -x $x -y $yoffset -n $tab_num $terminal -e $term_app
 	
 
 	tval=$(update_tab_status)
