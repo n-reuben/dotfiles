@@ -324,7 +324,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = monofur:size=13
-font-1 = M+ 1mn:pixelsize=15;3
+font-1 = M+ 1mn:pixelsize=22;3
 font-2 = MaterialIcons:size=13:antialias=false;6
 
 modules-left = 
@@ -347,15 +347,15 @@ modules-right =
 [module/tab1]
 type = custom/ipc
 hook-0 = termtabs -t 1
-hook-1 = echo "%{F#1e1e20} "
-hook-2 = echo "%{F#eaf2ba} "
+hook-1 = echo "%{F#a2a4b0} "
+hook-2 = echo termtabs -c 1
 click-left = termtabs -t 1
 initial = 2
 
 [module/tab2]
 type = custom/ipc
 hook-0 = termtabs -t 2
-hook-1 = echo "%{F#1e1e20} "
+hook-1 = echo "%{F#a2a4b0} "
 hook-2 = termtabs -c 2
 click-left = termtabs -t 2
 initial = 2
@@ -363,7 +363,7 @@ initial = 2
 [module/tab3]
 type = custom/ipc
 hook-0 = termtabs -t 3
-hook-1 = echo "%{F#1e1e20} "
+hook-1 = echo "%{F#a2a4b0} "
 hook-2 = termtabs -c 3
 click-left = termtabs -t 3
 initial = 2
@@ -371,7 +371,7 @@ initial = 2
 [module/tab4]
 type = custom/ipc
 hook-0 = termtabs -t 4
-hook-1 = echo "%{F#1e1e20} "
+hook-1 = echo "%{F#a2a4b0} "
 hook-2 = termtabs -c 4
 click-left = termtabs -t 4
 initial = 2
@@ -379,7 +379,7 @@ initial = 2
 [module/tab5]
 type = custom/ipc
 hook-0 = termtabs -t 5
-hook-1 = echo "%{F#1e1e20} "
+hook-1 = echo "%{F#a2a4b0} "
 hook-2 = termtabs -c 5
 click-left = termtabs -t 5
 initial = 2
@@ -387,7 +387,7 @@ initial = 2
 [module/tab6]
 type = custom/ipc
 hook-0 = termtabs -t 6
-hook-1 = echo "%{F#1e1e20} "
+hook-1 = echo "%{F#a2a4b0} "
 hook-2 = termtabs -c 6
 click-left = termtabs -t 6
 initial = 2
