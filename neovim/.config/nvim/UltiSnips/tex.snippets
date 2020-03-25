@@ -237,6 +237,7 @@ snippet gln "New glossary item" b
   description={${0:description}},
 }
 endsnippet
+
 snippet glnl "New long glossary item" b
 \longnewglossaryentry{${1:identifier}}
 {
@@ -247,6 +248,15 @@ snippet glnl "New long glossary item" b
 {
   ${0:description}
 }
+endsnippet
+
+snippet ftnt "New footnote" iA
+\footnote{$1} $0
+endsnippet
+
+#Here are some style snippets
+snippet icz "italicize" iA
+\textit{$1} $0
 endsnippet
 
 #Here are some mathematical syntax snippets
