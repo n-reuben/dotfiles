@@ -219,6 +219,7 @@ gaps outer 5
 
 #exec /usr/bin/compton --config ~/nitish_reuben/.config/compton/compton.conf~.i3/config
 exec --no-startup-id "nm-applet"
+exec ~/bin/dotfiles-homemonitor
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 # termtabs generates tab state where -i indicates number of tabs

@@ -63,7 +63,7 @@ snippet template "Basic template" b
 \usepackage{textcomp}
 \usepackage[USenglish]{babel}
 \usepackage{amsmath, amssymb}
-
+\usepackage{enumitem}
 
 % figure support
 \usepackage{import}
@@ -121,6 +121,12 @@ endsnippet
 
 snippet enum "Enumerate" bA
 \begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet enmr "Enumerate Resume" bA
+\begin{enumerate}[resume]
 	\item $0
 \end{enumerate}
 endsnippet

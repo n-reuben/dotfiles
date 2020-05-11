@@ -28,7 +28,7 @@ transparent = #00000000
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
 ; If no monitor is given, the primary monitor is used if it exists
 
-;monitor =
+monitor = DP-3
 
 ; Use the specified monitor as a fallback if the main one is not found.
 
@@ -290,6 +290,8 @@ enable-ipc = true
 
 
 [bar/secondary]
+
+monitor = DP-3
 
 override-redirect = false
 bottom = true
