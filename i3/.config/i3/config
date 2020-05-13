@@ -40,6 +40,10 @@ for_window [class="FLOATING"] floating enable
 bindsym $mod+Shift+Return exec termite --class FLOATING
 
 
+#start a calculator
+
+bindsym $mod+z exec "termite --class FLOATING -e ~/dotfiles/bin/mathcalc/mathcalcstart"
+
 # move all floating windows to the scratchpad
 bindsym $mod+g [floating] move scratchpad
 bindsym $mod+shift+g [floating] scratchpad show
