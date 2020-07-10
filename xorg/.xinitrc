@@ -38,4 +38,16 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-exec i3
+transmission-daemon &
+xsetroot -cursor_name left_ptr &
+setxkbmap us && exec sxhkd &
+picom --experimental-backends --backend glx -b &
+dunst &
+dock.sh &
+auto-connect-bt.sh &
+remaps &
+timer-checkupdates.sh &
+newsboat -x reload &
+SPTN.sh &
+MO.sh &
+exec bspwm

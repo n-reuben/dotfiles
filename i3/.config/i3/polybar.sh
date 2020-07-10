@@ -7,5 +7,15 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch polybar
-polybar main -r &
-polybar secondary -r &
+polybar workspace -r &
+polybar music -r &
+polybar player -r &
+polybar close -r &
+polybar notify -r &
+polybar open -r &
+polybar status -r &
+polybar power -r &
+
+
+
+
