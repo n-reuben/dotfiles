@@ -13,6 +13,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 "Plug 'yggdroot/indentline'
 
+Plug 'chrisbra/Colorizer'
+
 " Functionalities
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -66,7 +68,7 @@ highlight Normal gui=none
 highlight NonText guibg=none
 
 " Opaque Background (Comment out to use terminal's profile)
-" set termguicolors
+set termguicolors
 
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE

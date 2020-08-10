@@ -67,6 +67,8 @@ plug "ul/kak-lsp" do %{
 #    }
 #}
 
+plug "evanrelf/number-toggle.kak"
+
 #Auto-pairs for brackets
 plug "alexherbo2/auto-pairs.kak" %{
     map global user 's' ': auto-pairs-surround<ret>' -docstring "surround selection"

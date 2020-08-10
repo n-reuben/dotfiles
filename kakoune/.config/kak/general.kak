@@ -35,7 +35,7 @@ addhl global/ wrap
 
 set global ui_options ncurses_assistant=off
 set global ui_options ncurses_assistant=none
-colorscheme default
+colorscheme firefly
 
 # if not configured per file type, set tabs as 4 spaces
 set global tabstop 4
