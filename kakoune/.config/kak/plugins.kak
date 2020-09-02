@@ -34,11 +34,14 @@ plug "ul/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
+    define-command lsp-restart -docstring 'restart lsp server' %{ lsp-stop; lsp-start }
     set-option global lsp_completion_trigger "execute-keys 'h<a-h><a-k>\S[^\h\n,=;*(){}\[\]]\z<ret>'"
     set-option global lsp_diagnostic_line_error_sign "!"
     set-option global lsp_diagnostic_line_warning_sign "?"
-    hook global WinSetOption filetype=(c|cpp|rust) %{
+    hook global WinSetOption filetype=(c|cpp|rust|typescript|javascript|python) %{
         map window user "l" ": enter-user-mode lsp<ret>" -docstring "LSP mode"
+        map window lsp "n" "<esc>: lsp-find-error --include-warnings<ret>" -docstring "find next error or warning"
+        map window lsp "p" "<esc>: lsp-find-error --previous --include-warnings<ret>" -docstring "find previous error or warning"
         lsp-enable-window
         lsp-auto-hover-enable
         lsp-auto-hover-insert-mode-disable
@@ -49,7 +52,7 @@ plug "ul/kak-lsp" do %{
     hook global WinSetOption filetype=rust %{
         set-option window lsp_server_configuration rust.clippy_preference="on"
     }
-    hook global KakEnd .* lsp-exit
+    hook -always global KakEnd .* lsp-exit
 }
 
 #fzf tool for kakoune
@@ -74,37 +77,12 @@ plug "alexherbo2/auto-pairs.kak" %{
     map global user 's' ': auto-pairs-surround<ret>' -docstring "surround selection"
 }
 
+#Markdown live preview
+plug 'delapouite/kakoune-livedown'
+
 #Enable auto-pairs on load
 
 hook global WinCreate .* %{
   auto-pairs-enable
 }
 
-#tagbar to give you an outline of your program
-plug "andreyorst/tagbar.kak" defer "tagbar" %{
-    set-option global tagbar_sort false
-    set-option global tagbar_size 40
-    set-option global tagbar_display_anon false
-} config %{
-    # if you have wrap highlighter enamled in you configuration
-    # files it's better to turn it off for tagbar, using this hook:
-    hook global WinSetOption filetype=tagbar %{
-        remove-highlighter window/wrap
-        # you can also disable rendering whitespaces here, line numbers, and
-        # matching characters
-    }
-}
-
-#Hook for tagbar toggle
-## To see what filetypes are supported use `ctags --list-kinds | awk '/^\w+/'
-#hook global WinSetOption filetype=(c|cpp|rust) %{
-#    tagbar-enable
-#}
-
-#map global user  ': make-next-error<ret>'
-
-
-
-#To quit tagbar client on q
-alias global 'q' 'tagbar-quit'
-alias global 'wq' 'tagbar-write-quit'

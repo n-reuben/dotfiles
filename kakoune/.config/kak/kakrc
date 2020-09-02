@@ -1,6 +1,3 @@
-# kak-lsp
-eval %sh{kak-lsp --kakoune -s $kak_session}
-lsp-enable
 
 
 # Listed Config Files
@@ -22,3 +19,10 @@ evaluate-commands %sh{
         }"
     done
 }
+
+
+# kak-lsp
+eval %sh{kak-lsp --kakoune -s $kak_session}
+lsp-enable
+
+

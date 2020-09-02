@@ -25,6 +25,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+#darn npm permissions
+export PATH=~/.npm-global/bin:$PATH
+
 #Custom scripts
 export PATH=$PATH:"$HOME/bin"
 export PATH=$PATH:"$HOME/compilers/bin"

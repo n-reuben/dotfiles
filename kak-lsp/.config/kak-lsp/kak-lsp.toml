@@ -1,0 +1,58 @@
+verbosity = 3
+
+[server]
+# exit session if no requests were received during given period in seconds
+# works only in unix sockets mode (-s/--session)
+# set to 0 to disable
+timeout = 0
+
+[language.rust]
+filetypes = ["rust"]
+roots = ["Cargo.toml"]
+command = "rls"
+offset_encoding = "utf-8"
+
+[language.rust.initialization_options]
+offsetEncoding = ["utf-8"]
+formatTool = "rustfmt"
+
+[language.c_cpp]
+filetypes = ["c", "cpp"]
+roots = ["compile_flags.txt", "compile_commands.json"]
+command = "clangd"
+offset_encoding = "utf-8"
+
+[language.c_cpp.initialization_options]
+offsetEncoding = ["utf-8"]
+formatTool = "clang-format"
+
+[language.tsx]
+filetypes = ["typescript"]
+roots = ["package.json", "tsconfig.json"]
+command = "npx"
+args = ["typescript-language-server", "--stdio"]
+
+
+[language.python]
+filetypes = ["python"]
+roots = ["requirements.txt", "setup.py", ".git", ".hg"]
+command = "pyls"
+offset_encoding = "utf-8"
+
+[language.json]
+filetypes = ["json"]
+roots = ["package.json"]
+command = "json-languageserver"
+args = ["--stdio"]
+
+[language.css]
+filetypes = ["css"]
+roots = ["package.json"]
+command = "css-languageserver"
+args = ["--stdio"]
+
+[language.html]
+filetypes = ["html"]
+roots = ["package.json"]
+command = "html-languageserver"
+args = ["--stdio"]

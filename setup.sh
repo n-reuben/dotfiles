@@ -11,18 +11,11 @@ base=(
 
 # folders that should, or only need to be installed for a local user
 useronly=(
-    xorg
     lf
-    bspwm
-    sxhkd
-    picom
-    i3
-    polybar
-    rofi
-    dunst
     termite
     neovim
     kakoune
+    kak-lsp
     zathura
     calcurse
 )
