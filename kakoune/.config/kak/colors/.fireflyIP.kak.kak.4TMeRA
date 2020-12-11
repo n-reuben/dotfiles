@@ -1,0 +1,95 @@
+# Base16 Gruvbox Dark Hard Theme
+
+evaluate-commands %sh{
+
+ # special
+  fg0='rgb:#a2a4b0'
+  bg0='rgb:#292933'
+ 
+ # black
+  black0='rgb:#32323d'
+  black1='rgb:#40424f'
+ 
+ # red
+  red1='rgb:#f48fb1'
+  red2='rgb:#ec4890'
+ 
+ # green
+  green1='rgb:#1d9c80'
+  green2='rgb:#43cb8c'
+ 
+ # yellow
+  yellow1='rgb:#a1efd3'
+  yellow2='rgb:#fffdaf'
+ 
+ # blue
+  blue1='rgb:#92b6f4'
+  blue2='rgb:#87dfeb'
+ 
+  # magenta
+  magenta1='rgb:#985eff'
+  magenta2='rgb:#bd99ff'
+ 
+  # cyan
+  cyan1='rgb:#6dc7b5'
+  cyan2='rgb:#51e2c2'
+ 
+  # white'
+  white1='rgb:#4d4f5c'
+  white2='rgb:#c6c6c6'
+ 
+     echo "
+
+#        # Code highlighting#        face global value     ${b_orange}
+#        face global type      ${b_yellow}
+#        face global variable  ${b_aqua}
+#        face global module    ${f_yellow}
+#        face global function  ${b_blue}
+#        face global string    ${b_green}
+#        face global keyword   ${b_purple}
+#        face global operator  ${b_blue}
+#        face global attribute ${b_orange}
+        face global comment   ${white1}+a
+#        face global meta      ${b_red}
+#        face global builtin   default+b
+#
+#        # Markup
+#        face global title         ${b_green}+b
+#        face global header        ${b_blue}+b
+#        face global bold          default,default+ba
+#        face global italic        default,default+ia
+#        face global underline     default,default+ufa
+#        face global strikethrough ${bg3}
+#        face global mono          ${fg2}
+#        face global block         ${fg3}
+#        face global link          ${b_aqua}+u
+#        face global bullet        ${b_red}
+#        face global list          ${fg0}
+#
+        face global Default            ${fg0},${bg0}
+#        face global PrimarySelection   default,${bg2}+g
+#        face global SecondarySelection default,${bg1}+g
+#        face global PrimaryCursor      ${bg0},${fg0}+fg
+#        face global SecondaryCursor    ${bg0},${fg3}+fg
+#        face global PrimaryCursorEol   ${bg0},${fg2}+fg
+#        face global SecondaryCursorEol ${bg0},${fg4}+fg
+#        face global LineNumbers        ${bg3}
+#        face global LineNumberCursor   ${fg3}
+#        face global LineNumbersWrapped ${bg0_hard}
+#        face global MenuForeground     ${fg1},${bg3}+b
+#        face global MenuBackground     default,${bg2}
+#        face global MenuInfo           ${b_blue}
+#        face global Information        ${bg0},${fg4}
+#        face global Error              ${b_red},default+b
+#        face global StatusLine         ${fg1},${bg1}
+#        face global StatusLineMode     ${fg1}
+#        face global StatusLineInfo     ${fg3}
+#        face global StatusLineValue    ${b_red}
+#        face global StatusCursor       ${bg0},${fg0}
+#        face global Prompt             default
+#        face global MatchingChar       default,${bg2}
+#        face global BufferPadding      ${bg0_hard},${bg0_hard}
+#        face global Whitespace         ${bg2}+f
+#        face global WrapMarker         ${bg2}+f
+#    "
+}

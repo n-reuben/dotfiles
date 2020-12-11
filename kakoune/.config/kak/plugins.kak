@@ -11,7 +11,7 @@ evaluate-commands %sh{
     else
         mkdir -p $PLUGIN_DIRECTORY
         echo echo "installing plugins..."
-        git clone "https://github.com/andreyorst/plug.kak" "$PLUGIN_DIRECTORY/plug.kak" > /dev/null 
+        git clone "https://github.com/robertmeta/plug.kak" "$PLUGIN_DIRECTORY/plug.kak" > /dev/null 
         GIT_RET_CODE=$?
         if [ "$GIT_RET_CODE" -eq "0" ]; then
             echo echo "kak.plug installed successfully"
@@ -27,7 +27,7 @@ set-option global plug_install_dir %sh{ echo $HOME/.plugins/kak/plugins }
 
 # Plugins
 #Plugin Manager
-plug "https://github.com/andreyorst/plug.kak" noload
+plug "https://github.com/robertmeta/plug.kak" noload
 
 #Kakoune Language Server Protocol
 plug "ul/kak-lsp" do %{
@@ -70,19 +70,33 @@ plug "ul/kak-lsp" do %{
 #    }
 #}
 
+plug "andreyorst/kaktree" config %{
+    hook global WinSetOption filetype=kaktree %{
+        remove-highlighter buffer/numbers
+        remove-highlighter buffer/matching
+        remove-highlighter buffer/wrap
+        remove-highlighter buffer/show-whitespaces
+    }
+    kaktree-enable
+}
+
 plug "evanrelf/number-toggle.kak"
 
+#Prelude of shell blocks for Kakoune
+plug "alexherbo2/prelude.kak"
+
 #Auto-pairs for brackets
-plug "alexherbo2/auto-pairs.kak" %{
-    map global user 's' ': auto-pairs-surround<ret>' -docstring "surround selection"
-}
+plug "alexherbo2/auto-pairs.kak" 
 
 #Markdown live preview
 plug 'delapouite/kakoune-livedown'
 
 #Enable auto-pairs on load
 
-hook global WinCreate .* %{
-  auto-pairs-enable
-}
+#hook global WinCreate .* %{
+#  auto-pairs-enable
+#}
+
+
+
 
