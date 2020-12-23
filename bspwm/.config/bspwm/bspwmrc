@@ -1,8 +1,13 @@
 #! /bin/sh
 
 #feh --no-fehbg --bg-fill "$HOME/dotfiles/wallpapers/wal.jpg"
+
+
+
+source $HOME/bin/dotfiles-homemonitor
 nitrogen --restore
 source $HOME/dotfiles/bin/env
+
 
 bspc monitor HDMI-1 -d I II III IV V VI VII
 bspc monitor HDMI-2 -d VIII IX X

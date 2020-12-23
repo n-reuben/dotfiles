@@ -51,3 +51,4 @@ newsboat -x reload &
 SPTN.sh &
 MO.sh &
 exec bspwm
+

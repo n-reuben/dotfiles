@@ -65,7 +65,7 @@ alias ,,=..
 autoload -U promptinit; promptinit
 prompt pure
 
-export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

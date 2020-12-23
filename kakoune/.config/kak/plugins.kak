@@ -84,18 +84,21 @@ plug "evanrelf/number-toggle.kak"
 
 #Prelude of shell blocks for Kakoune
 plug "alexherbo2/prelude.kak"
+require-module prelude
 
 #Auto-pairs for brackets
 plug "alexherbo2/auto-pairs.kak" 
+require-module auto-pairs
+
+#Enable auto-pairs on load
+
+hook global WinCreate .* %{
+  auto-pairs-enable
+}
 
 #Markdown live preview
 plug 'delapouite/kakoune-livedown'
 
-#Enable auto-pairs on load
-
-#hook global WinCreate .* %{
-#  auto-pairs-enable
-#}
 
 
 
