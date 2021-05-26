@@ -30,55 +30,85 @@
 #color14 = #8fbcbb
 #color15 = #eceff4
 
-#Firefly Theme
+##Firefly Theme
+#
+#[colors]
+#
+## special
+#foreground      = #a2a4b0
+#foreground_bold = #a2a4b0
+#cursor          = #a2a4b0
+#background      = #292933
+#
+##special alternate
+##
+##foreground      = #f4f7e2
+##foreground_bold = #f4f7e2
+##cursor          = #f4f7e2
+##background      = #102029
+#
+#
+## black
+#color0  = #32323d
+#color8  = #40424f
+#
+## red
+#color1  = #f48fb1
+#color9  = #ec4890
+#
+## green
+#color2  = #1d9c80
+#color10 = #43cb8c
+#
+## yellow
+#color3  = #a1efd3
+#color11 = #fffdaf
+#
+## blue
+#color4  = #92b6f4
+#color12 = #87dfeb
+#
+## magenta
+#color5  = #985eff
+#color13 = #bd99ff
+#
+## cyan
+#color6  = #6dc7b5
+#color14 = #51e2c2
+#
+## white
+#color7  = #4d4f5c
+#color15 = #c6c6c6
+
 
 [colors]
+cursor = #927f70
+cursor_foreground = #927f70
 
-# special
-foreground      = #a2a4b0
-foreground_bold = #a2a4b0
-cursor          = #a2a4b0
-background      = #292933
+foreground = #927f70
+foreground_bold = #927f70
+background = #fffff7
 
-#special alternate
-#
-#foreground      = #f4f7e2
-#foreground_bold = #f4f7e2
-#cursor          = #f4f7e2
-#background      = #102029
+highlight = #927f70
 
+color0       =        #fffff7
+color1       =        #d2ab9c
+color2       =        #9fa776
+color3       =        #c6b580
+color4       =        #6c89b4
+color5       =        #9172bb
+color6       =        #70ae85
+color7       =        #927f70
+color8       =        #4e4640
+color9       =        #d2ab9c
+color10      =        #9fa776
+color11      =        #c6b580
+color12      =        #6c89b4
+color13      =        #9172bb
+color14      =        #70ae85
+color15      =        #fffff7
+ 
 
-# black
-color0  = #32323d
-color8  = #40424f
-
-# red
-color1  = #f48fb1
-color9  = #ec4890
-
-# green
-color2  = #1d9c80
-color10 = #43cb8c
-
-# yellow
-color3  = #a1efd3
-color11 = #fffdaf
-
-# blue
-color4  = #92b6f4
-color12 = #87dfeb
-
-# magenta
-color5  = #985eff
-color13 = #bd99ff
-
-# cyan
-color6  = #6dc7b5
-color14 = #51e2c2
-
-# white
-color7  = #4d4f5c
-color15 = #c6c6c6
 
 # vim: ft=dosini cms=#%s
 

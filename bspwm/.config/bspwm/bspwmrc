@@ -9,8 +9,8 @@ nitrogen --restore
 source $HOME/dotfiles/bin/env
 
 
-bspc monitor HDMI-1 -d I II III IV V VI VII
-bspc monitor HDMI-2 -d VIII IX X
+bspc monitor HDMI-2 -d I II III IV V VI VII
+bspc monitor HDMI-1 -d VIII IX X
 
 
 bspc config border_width        	0

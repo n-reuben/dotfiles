@@ -1,0 +1,104 @@
+
+
+
+#Nord Theme
+#
+#[colors]
+#cursor = #d8dee9
+#cursor_foreground = #2e3440
+#
+#foreground = #d8dee9
+#foreground_bold = #d8dee9
+#background = #2e3440
+#
+#highlight = #4c566a
+#
+#color0  = #3b4252
+#color1  = #bf616a
+#color2  = #a3be8c
+#color3  = #ebcb8b
+#color4  = #81a1c1
+#color5  = #b48ead
+#color6  = #88c0d0
+#color7  = #e5e9f0
+#color8  = #4c566a
+#color9  = #bf616a
+#color10 = #a3be8c
+#color11 = #ebcb8b
+#color12 = #81a1c1
+#color13 = #b48ead
+#color14 = #8fbcbb
+#color15 = #eceff4
+
+#Firefly Theme
+
+[colors]
+
+# special
+foreground      = #a2a4b0
+foreground_bold = #a2a4b0
+cursor          = #a2a4b0
+background      = #292933
+
+#special alternate
+#
+#foreground      = #f4f7e2
+#foreground_bold = #f4f7e2
+#cursor          = #f4f7e2
+#background      = #102029
+
+
+# black
+color0  = #32323d
+color8  = #40424f
+
+# red
+color1  = #f48fb1
+color9  = #ec4890
+
+# green
+color2  = #1d9c80
+color10 = #43cb8c
+
+# yellow
+color3  = #a1efd3
+color11 = #fffdaf
+
+# blue
+color4  = #92b6f4
+color12 = #87dfeb
+
+# magenta
+color5  = #985eff
+color13 = #bd99ff
+
+# cyan
+color6  = #6dc7b5
+color14 = #51e2c2
+
+# white
+color7  = #4d4f5c
+color15 = #c6c6c6
+
+# Light Theme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# vim: ft=dosini cms=#%s
+
+[options]
+#font = Hermit 10
+font = Iosevka 10
+#font = monofur Regular 12
+#font = BreezeSans 12
